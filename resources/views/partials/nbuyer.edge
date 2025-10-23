@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class='bx bx-menu'></label>
+        <a href="#" class="navbar-logo"><img src="/image/logob.png">Dapoer<span>Betawi</span></a>
+        <nav class="navbar">
+        <a href="{{route('beranda')}}">Beranda</a>
+        <a href="{{route('menuUser')}}">Menu</a>
+        <a href="{{route('aboutUser')}}">Tentang Kami</a>
+        </nav>
+        <div class="icons">
+            <div class="search-toogle-cont">
+                <input type="checkbox" id="search-toggle" class="search-toggle">
+                <div id="search" class="search-bar">
+                    <input type="text" placeholder="Cari menu..." class="searchInput" id="searchInput">
+                    <button type="submit" class="search-submit"></button>
+                    <div class="list" id="list">
+                        <div class="product" data-category="nasi">Nasi Uduk</div>
+                        <div class="product" data-category="nasi">Nasi Ulam</div>
+                        <div class="product" data-category="nasi">Nasi Kuning</div>
+                        <div class="product" data-category="lauk">Tempe Orek</div>
+                        <div class="product" data-category="lauk">Tempe Orek Pedas</div>
+                        <div class="product" data-category="lauk">Bihun</div>
+                        <div class="product" data-category="lauk">Mie</div>
+                        <div class="product" data-category="lauk">Perkedel</div>
+                        <div class="product" data-category="lauk">Ikan Pindang Balado</div>
+                        <div class="product" data-category="lauk">Telur Bulat Balado</div>
+                        <div class="product" data-category="lauk">Telur Ceplok Balado</div>
+                        <div class="product" data-category="lauk">Telur Semur</div>
+                        <div class="product" data-category="lauk">Telur Dadar</div>
+                        <div class="product" data-category="lauk">Kentang Balado</div>
+                        <div class="product" data-category="lauk">Tahu Semur</div>
+                        <div class="product" data-category="lauk">Usus Tumis</div>
+                        <div class="product" data-category="lauk">Kikil Tumis</div>
+                        <div class="product" data-category="gorengan">Bakwan</div>
+                        <div class="product" data-category="gorengan">Tahu Isi</div>
+                        <div class="product" data-category="gorengan">Tempe Goreng</div>
+                    </div>
+                </div>
+            </div>
+            <a href="{{route('wishlist')}}" id="cart"><i class='bx bx-heart'></i></a>
+            <form method="POST" action="{{ route('logout') }}">
+                {{ csrfField() }}
+                <button type="submit" class="btn-logout">⎋ Logout</button>
+            </form>
+        </div>
+    </header>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const productList = document.getElementById('list')
+        const products = document.querySelectorAll('.product');
+
+        searchInput.addEventListener('focus', () => {
+            productList.style.display = 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('search').contains(e.target)) {
+                productList.style.display = 'none';
+            }
+        });
+    
+        searchInput.addEventListener('keyup', function() {
+            const keyword = this.value.toLowerCase();
+            productList.style.display = 'block';
+    
+            products.forEach(product => {
+                const name = product.textContent.toLowerCase();
+                if (name.includes(keyword)) {
+                    product.classList.remove('hidden');
+                } else {
+                    product.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@layout.buyer({ title: 'Wishlist' })
+  @slot('style')
+    <link rel="stylesheet" href="/css/wl.css">
+  @endslot
+
+  @slot('main')
+    <section class="wishlist" id="wishlist">
+      <h1>Wishlist Anda</h1>
+
+      <div class="wishlist-grid" id="wishlistContainer">
+        @each(product in wishlist)
+            <div class="item">
+              <img src="{{ product.image }}" alt="{{ product.name }}">
+              <h2>{{ product.name }}</h2>
+              <p>Harga: Rp{{ product.price }}</p>
+              <p>Penjual: {{ product.seller.username }}</p>
+
+              <form method="POST" action="/wishlist/toggle/{{ product.id }}">
+                @csrf()
+                <button type="submit" class="remove-btn">Hapus dari Wishlist</button>
+              </form>
+            </div>
+        @endeach
+      </div>
+    </section>
+  @endslot
+@end

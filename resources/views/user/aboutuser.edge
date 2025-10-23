@@ -1,0 +1,23 @@
+@layout.buyer({ title: 'Tentang Kami' })
+    @slot('style')
+        <link rel="stylesheet" href="/css/aboutstyle.css">
+    @endslot
+    @slot('main')
+        <section class="about" id="about">
+            <div class="aboutus">
+                <div class="about-text">
+                    <h2>Tentang Kami</h2>
+                    <p>Dapoer Betawi berdiri sejak tahun 2020, tepat di masa pandemi Covid-19, 
+                    dengan semangat untuk menghadirkan cita rasa khas Betawi ke tengah masyarakat. 
+                    Berawal dari dapur sederhana, kami terus berusaha menyajikan hidangan autentik 
+                    yang mengingatkan pada kehangatan rumah, sekaligus menjaga tradisi kuliner Betawi 
+                    agar tetap lestari hingga kini.</p>
+                    <h3>Cita Rasa Khas Betawi, Dari Dulu Hingga Kini</h3>
+                </div>
+                <div class="about-img">
+                    <img src="/image/about.png" alt="">
+                </div>
+            </div>
+        </section>
+    @endslot
+@end

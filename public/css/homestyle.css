@@ -1,0 +1,143 @@
+@import './nstyle.css';
+@import './fstyle.css';
+:root{
+    --main-color: #333333;
+    --second-color: #ce8930;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+img {
+    width: 100%;
+}
+body {
+    background: url(/image/coklat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.beranda {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 200px;
+}
+.beranda-img{
+    flex: 1 1 17rem;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+.beranda-text {
+    flex: 1 1 18rem;
+    margin-top: 5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.beranda-text h1 {
+    font-size: 3rem;
+    color: var(--second-color);
+    margin-bottom: 1rem;
+}
+.beranda-text p {
+    margin: 0.5rem 0 1.4rem;  
+    font-size: 1.125rem;  
+}
+
+.best-seller {
+    margin-top: 60px;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.best-seller h2 {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+.best-seller p{
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    color: #555;
+}
+.best-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+.best-menu card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+}
+.best-menu .card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.best-menu .card h3 {
+    margin: 0.625rem 0 0.3125rem;
+    font-size: 1.25rem;
+    color: #d97706;
+    font-weight: 500;
+}
+.best-menu .card span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #d97706;
+}
+.button {
+    margin-top: 2rem;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--second-color);
+    border-radius: 8px;
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.btn:hover {
+    color: white;
+    background: var(--second-color);
+    border-radius: 4px;
+}

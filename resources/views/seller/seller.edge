@@ -1,0 +1,177 @@
+@layout.tseller({ title: 'Dashboard' })
+    @slot('style')
+        <link rel="stylesheet" href="/css/seller.css">
+    @endslot
+    @slot('main')
+        <section class="tambah">
+            <h2>Tambah Produk</h2>
+            <form action="/seller/product" method="POST" enctype="multipart/form-data">
+                <input type="text" name="nama" placeholder="Nama Produk" required>
+                <input type="number" name="harga" step="1000" placeholder="Harga" required>
+                <input type="file" name="gambar" accept="image/*">
+                <button type="submit">Tambah Produk</button>
+            </form>
+        </section>
+    
+        <section class="dashboard" id="dashboard">
+            <div class="produk">
+                <h2>Your Product</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Menu</th>
+                            <th>Gambar</th>
+                            <th>Harga</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nasi Uduk</td>
+                            <td><img src="/image/nuduk.jpg" alt="Produk"></td>
+                            <td>Rp8.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nasi Ulam</td>
+                            <td><img src="/image/nulam.jpg" alt="Produk"></td>
+                            <td>Rp8.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nasi Kuning</td>
+                            <td><img src="/image/nakun.jpg" alt="Produk"></td>
+                            <td>Rp8.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tempe Orek</td>
+                            <td><img src="/image/orekm.jpg" alt="Produk"></td>
+                            <td>Rp2.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tempe Orek Pedas</td>
+                            <td><img src="/image/orekp.jpg" alt="Produk"></td>
+                            <td>Rp2.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bihun</td>
+                            <td><img src="/image/bihun.jpg" alt="Produk"></td>
+                            <td>Rp2.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mie</td>
+                            <td><img src="/image/mie.jpg" alt="Produk"></td>
+                            <td>Rp2.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Perkedel</td>
+                            <td><img src="/image/perkedel.jpg" alt="Produk"></td>
+                            <td>Rp5.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ikan Pindang Balado</td>
+                            <td><img src="/image/pindang.jpg" alt="Produk"></td>
+                            <td>Rp6.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Telur Bulat Balado</td>
+                            <td><img src="/image/telurb.jpg" alt="Produk"></td>
+                            <td>Rp5.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Telur Ceplok Balado</td>
+                            <td><img src="/image/ceploksambal.jpg" alt="Produk"></td>
+                            <td>Rp5.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Telur Semur</td>
+                            <td><img src="/image/telurs.jpg" alt="Produk"></td>
+                            <td>Rp5.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Telur Dadar</td>
+                            <td><img src="/image/dadar.jpg" alt="Produk"></td>
+                            <td>Rp5.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kentang Balado</td>
+                            <td><img src="/image/kentang.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Usus Tumis</td>
+                            <td><img src="/image/usus.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kikil Tumis</td>
+                            <td><img src="/image/kikil.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tahu Semur</td>
+                            <td><img src="/image/tahus.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bakwan</td>
+                            <td><img src="/image/bakwan.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tahu Isi</td>
+                            <td><img src="/image/tahuisi.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tempe Goreng</td>
+                            <td><img src="/image/tgoreng.jpg" alt="Produk"></td>
+                            <td>Rp4.000</td>
+                            <td><button class="dlt-btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buyer-wl">
+                <h2>Wishlist Pelanggan</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Menu</th>
+                      <th>Gambar</th>
+                      <th>Harga</th>
+                      <th>Akun Pelanggan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @each(wishlist in wishlists)
+                        <tr>
+                          <td>{{ wishlist.productName }}</td>
+                          <td><img src="{{ wishlist.productImage }}"></td>
+                          <td>Rp{{ wishlist.price }}</td>
+                          <td>{{ wishlist.buyerName }}</td>
+                        </tr>
+                    @endeach
+                  </tbody>
+                </table>
+              </div>
+        </section>
+    @endslot
+@end

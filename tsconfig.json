@@ -1,0 +1,14 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "./",
+    "outDir": "./build",
+    "moduleResolution": "node16",
+    "paths": {
+        "@ioc/*": ["./node_modules/@adonisjs/*/build/adonis-typings"],
+        "#controllers/*": ["app/controllers/Http/*"],
+        "#data/*": ["app/data/*"]
+    }
+  }
+}

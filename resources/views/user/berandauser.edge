@@ -1,0 +1,46 @@
+@layout.buyer({ title: 'Beranda' })
+    @slot('style')
+        <link rel="stylesheet" href="/css/homestyle.css">
+    @endslot
+    @slot('main')
+        <section class="beranda" id="beranda">
+            <div class="beranda-text">
+                <span>Selamat Datang di</span>
+                <h1>Koleksi<br>Dapoer Betawi!</h1>
+                <p>Cita Rasa Khas Betawi, Dari Dulu Hingga Kini</p>
+            </div>
+            <div class="beranda-img">
+                <img src="/image/uduk.jpg" alt="">
+            </div>
+            <div class="best-seller">
+                <h2>Menu Terbaik Kami</h2>
+                <p>Pilihan favorit pelanggan yang selalu bikin rindu rasa Betawi asli!</p>
+                <div class="best-menu">
+                    <div class="card">
+                        <div class="badge">⭐Terbaik</div>
+                        <img src="/image/orekbihun.jpg" alt="Nasi Uduk">
+                        <h3>Nasi Uduk</h3>
+                        <p>Nasi gurih khas Betawi dengan lauk Tempe Orek Pedas dan Bihun.</p>
+                        <span>Rp12.000</span>
+                    </div>
+                    <div class="card">
+                        <div class="badge">⭐Terbaik</div>
+                        <img src="/image/ulamsemur.jpg" alt="Nasi Ulam">
+                        <h3>Nasi Ulam</h3>
+                        <p>Nasi bener khas Betawi dengan lauk Semur Tahu.</p>
+                        <span>Rp12.000</span>
+                    </div>
+                    <div class="card">
+                        <div class="badge">⭐Terbaik</div>
+                        <img src="/image/kuningbihun.jpg" alt="Nasi Kuning">
+                        <h3>Nasi Uduk</h3>
+                        <p>Nasi kunyit khas Betawi dengan lauk Tempe Orek Pedas dan Bihun.</p>
+                        <span>Rp12.000</span>
+                    </div>
+                </div>
+            <div class="button">
+                <a href="{{route('menu')}}" class="btn">Lihat Menu</a>
+            </div>
+        </section>
+    @endslot
+@end
